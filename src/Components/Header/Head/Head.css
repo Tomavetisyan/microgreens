@@ -1,11 +1,11 @@
 .head {
-    background-color: #064635;
+    background-color: #82954B;
     padding: 10px 0;
     color: #fff;
 }
 
-.head i {
-    margin-right: 10px;
+.head-container{
+    
 }
 
 .head label {

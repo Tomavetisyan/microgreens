@@ -1,6 +1,8 @@
 .header {
-  height: 8vh;
-  
+  width: 100%;
+  background-color: white;
+  border: 3px solid  #82954B;
+
 }
 
 .header ul {
@@ -8,33 +10,8 @@
 }
 
 .header ul li a {
-  transition: 0.5s;
   font-size: 15px;
   font-weight: 400;
 }
 
-.text-hover a:hover {
-  color: #ff014f;
-}
-
-.center {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-}
-
-.hidden{
-  display: none;
-}
-
-.search.active {
-  height: 12vh;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
-}
 
