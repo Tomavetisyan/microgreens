@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import {Slide1, Slide2, Slide3} from '../../../Assets/index';
+import {Slide1, Slide2, Slide3} from '../../../../Assets/index'
 
 import "./Slideshow.css";
 
