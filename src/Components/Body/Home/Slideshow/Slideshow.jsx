@@ -64,8 +64,8 @@ const Slideshow = () => {
                     key={index}
                 >
                     {index === currentSlide && (
-                    <div className="slide current ">
-                        <img src={slide.image} alt="slide" className="image" />
+                    <div className="slide current center ">
+                        <img src={slide.image} alt="slide" className="image " />
                         <div className="content">
                         <h2>{slide.heading}</h2>
                         <p>{slide.desc}</p>

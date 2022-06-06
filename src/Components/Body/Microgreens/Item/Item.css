@@ -1,9 +1,9 @@
 .Item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 16.66rem;
+    display: block;
+    width: 19rem;
     margin: 0 .5rem 2.3rem .5rem;
+    text-align: center;
+    align-items: center;
   }
   
   .Item .image-container {
@@ -17,8 +17,7 @@
     font-weight: 600;
   }
   
-  .Item-information {
-    display: flex;
+  .Item-price {
     justify-content: space-between;
   }
   
@@ -38,7 +37,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: right;
   }
   
   .Item-reviews h3 {

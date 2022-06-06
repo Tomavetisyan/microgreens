@@ -34,7 +34,6 @@ class Navbar extends React.Component {
         });
       }
     });
-    console.log(window.pageYOffset)
   }
 
   setMobileMenu(mobileMenu){
