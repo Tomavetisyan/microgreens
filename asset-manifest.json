@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Microgreens/static/css/main.b19ebca7.css",
-    "main.js": "/Microgreens/static/js/main.2489fce0.js",
-    "static/media/Slide2.jpg": "/Microgreens/static/media/Slide2.c3e5c06a51475a5efcc4.jpg",
-    "static/media/Slide1.jpg": "/Microgreens/static/media/Slide1.d641226119f42e2cb6ff.jpg",
-    "static/media/MicroArugula.jpeg": "/Microgreens/static/media/MicroArugula.76728194a8142c74d77d.jpeg",
-    "static/media/MicroBasilItalian.jpeg": "/Microgreens/static/media/MicroBasilItalian.6245188f42a859658ae2.jpeg",
-    "static/media/MicroAmaranthRed.jpeg": "/Microgreens/static/media/MicroAmaranthRed.68c91859f8becf956c61.jpeg",
-    "static/media/MicroAsianMix.jpeg": "/Microgreens/static/media/MicroAsianMix.c8bfad164144d2a74374.jpeg",
-    "static/media/Slide3.jpg": "/Microgreens/static/media/Slide3.ed7b477f771acb2e5406.jpg",
-    "index.html": "/Microgreens/index.html",
-    "main.b19ebca7.css.map": "/Microgreens/static/css/main.b19ebca7.css.map",
-    "main.2489fce0.js.map": "/Microgreens/static/js/main.2489fce0.js.map"
+    "main.css": "/microgreens/static/css/main.b19ebca7.css",
+    "main.js": "/microgreens/static/js/main.5f65ef34.js",
+    "static/media/Slide2.jpg": "/microgreens/static/media/Slide2.c3e5c06a51475a5efcc4.jpg",
+    "static/media/Slide1.jpg": "/microgreens/static/media/Slide1.d641226119f42e2cb6ff.jpg",
+    "static/media/MicroArugula.jpeg": "/microgreens/static/media/MicroArugula.76728194a8142c74d77d.jpeg",
+    "static/media/MicroBasilItalian.jpeg": "/microgreens/static/media/MicroBasilItalian.6245188f42a859658ae2.jpeg",
+    "static/media/MicroAmaranthRed.jpeg": "/microgreens/static/media/MicroAmaranthRed.68c91859f8becf956c61.jpeg",
+    "static/media/MicroAsianMix.jpeg": "/microgreens/static/media/MicroAsianMix.c8bfad164144d2a74374.jpeg",
+    "static/media/Slide3.jpg": "/microgreens/static/media/Slide3.ed7b477f771acb2e5406.jpg",
+    "index.html": "/microgreens/index.html",
+    "main.b19ebca7.css.map": "/microgreens/static/css/main.b19ebca7.css.map",
+    "main.5f65ef34.js.map": "/microgreens/static/js/main.5f65ef34.js.map"
   },
   "entrypoints": [
     "static/css/main.b19ebca7.css",
-    "static/js/main.2489fce0.js"
+    "static/js/main.5f65ef34.js"
   ]
 }
