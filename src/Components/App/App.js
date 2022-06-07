@@ -19,11 +19,12 @@ class App extends React.Component {
           <Header />
             <div>
               <Switch>
+                
+                <Route exact path="/items">
+                  <Microgreens />
+                </Route>
                 <Route exact path="/">
                   <Home />
-                </Route>
-                <Route exact path="/Microgreens">
-                  <Microgreens />
                 </Route>
               </Switch>
             </div>
