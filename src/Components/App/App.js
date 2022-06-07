@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -19,11 +19,10 @@ class App extends React.Component {
           <Header />
             <div>
               <Switch>
-                
-                <Route exact path="/items">
+                <Route exact path="/microgreens/items">
                   <Microgreens />
                 </Route>
-                <Route exact path="/">
+                <Route exact path="/microgreens">
                   <Home />
                 </Route>
               </Switch>
