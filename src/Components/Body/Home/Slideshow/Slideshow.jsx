@@ -10,7 +10,7 @@ const Slideshow = () => {
         {
             image: Slide1,
             heading: "Name",
-            desc: "Description",
+            desc: "This is the description for the picture shown right here. it is a very nice picture",
         },
         {
             image: Slide2,
@@ -67,10 +67,10 @@ const Slideshow = () => {
                     <div className="slide current center ">
                         <img src={slide.image} alt="slide" className="image " />
                         <div className="content">
-                        <h2>{slide.heading}</h2>
-                        <p>{slide.desc}</p>
-                        
-                        <button className="slide-button">Shop now</button>
+                            <h2>{slide.heading}</h2>
+                            <p>{slide.desc}</p>
+                            
+                            <button className="slide-button">Shop now</button>
                         </div>
                     </div>
                     )}

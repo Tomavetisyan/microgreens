@@ -52,18 +52,20 @@
 }
 
 .content {
+  z-index: 9999;
   position: absolute;
   bottom: 8px;
-  left: 10%;
+  left: 5%;
   opacity: 0;
   width: 35%;
-  max-width: 500px;
-  min-width: 355px;
+  max-width: 350px;
+  min-width: 150px;
   color: #fff;
-  padding: 3rem;
+  padding: 1rem;
   background: rgba(0, 0, 0, 0.3);
   /* animation-delay: 1s; */
   animation-fill-mode: forwards;
+  font-size: 14px;
 }
 .content button:hover{
   color: #EFD345;

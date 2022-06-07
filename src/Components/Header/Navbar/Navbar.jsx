@@ -243,12 +243,6 @@ class Navbar extends React.Component {
                 </div>
                 <Link to="/" className="hover middle"><img src={Logo} alt=""  /></Link>
                 <div className="flex">
-                  <button className='' onClick={() => this.setSearchBar()}>
-                    {this.state.searchBar ?              
-                      "":
-                      <i className="fa fa-search icon-circle hover"></i> }
-                  </button>     
-                  <i className="fa fa-user icon-circle"></i>
                   <div className="cart">
                     <a href="/cart" className="">
                       <i className="fa fa-shopping-bag icon-circle"></i>
