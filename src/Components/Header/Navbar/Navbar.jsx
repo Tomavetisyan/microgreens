@@ -116,7 +116,7 @@ class Navbar extends React.Component {
             <div className="head-container">
               <div className="header-holder">
 
-                <a className="logo logo-alignment" href="/"><img src={Logo} alt=""  /></a>
+              <Link to="/microgreens" className="hover"><img src={Logo} alt=""  /></Link>
       
                 <div className="navlink">
                   <ul className="nav-list capitalize" >

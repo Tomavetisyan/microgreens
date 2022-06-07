@@ -17,8 +17,10 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
-            <div>
+          <Microgreens />
+            {/* <div>
               <Switch>
+                
                 <Route exact path="/microgreens/items">
                   <Microgreens />
                 </Route>
@@ -26,7 +28,7 @@ class App extends React.Component {
                   <Home />
                 </Route>
               </Switch>
-            </div>
+            </div> */}
           </Router>
       </>
 
