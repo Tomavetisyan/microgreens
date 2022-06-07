@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/microgreens/static/css/main.b19ebca7.css",
-    "main.js": "/microgreens/static/js/main.1a344afe.js",
+    "main.css": "/microgreens/static/css/main.cdf535b5.css",
+    "main.js": "/microgreens/static/js/main.bfb8d090.js",
     "static/media/Slide2.jpg": "/microgreens/static/media/Slide2.c3e5c06a51475a5efcc4.jpg",
     "static/media/Slide1.jpg": "/microgreens/static/media/Slide1.d641226119f42e2cb6ff.jpg",
     "static/media/MicroArugula.jpeg": "/microgreens/static/media/MicroArugula.76728194a8142c74d77d.jpeg",
@@ -10,11 +10,11 @@
     "static/media/MicroAsianMix.jpeg": "/microgreens/static/media/MicroAsianMix.c8bfad164144d2a74374.jpeg",
     "static/media/Slide3.jpg": "/microgreens/static/media/Slide3.ed7b477f771acb2e5406.jpg",
     "index.html": "/microgreens/index.html",
-    "main.b19ebca7.css.map": "/microgreens/static/css/main.b19ebca7.css.map",
-    "main.1a344afe.js.map": "/microgreens/static/js/main.1a344afe.js.map"
+    "main.cdf535b5.css.map": "/microgreens/static/css/main.cdf535b5.css.map",
+    "main.bfb8d090.js.map": "/microgreens/static/js/main.bfb8d090.js.map"
   },
   "entrypoints": [
-    "static/css/main.b19ebca7.css",
-    "static/js/main.1a344afe.js"
+    "static/css/main.cdf535b5.css",
+    "static/js/main.bfb8d090.js"
   ]
 }
