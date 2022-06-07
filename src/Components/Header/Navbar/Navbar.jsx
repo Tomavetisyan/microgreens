@@ -11,7 +11,7 @@ class Navbar extends React.Component {
     this.state = {
       mobileMenu: false,
       searchBar: false,
-      sticky: false
+      desktopSticky: false
     };
     this.setMobileMenu = this.setMobileMenu.bind(this);
     this.setSearchBar = this.setSearchBar.bind(this);
@@ -26,11 +26,22 @@ class Navbar extends React.Component {
     window.addEventListener('scroll', () => {
       if(window.pageYOffset > 45){
         this.setState({
-          sticky: true
+          desktopSticky: true
         });
       }else{
         this.setState({
-          sticky: false
+          desktopSticky: false
+        });
+      }
+    });
+    window.addEventListener('scroll', () => {
+      if(window.pageYOffset > 145){
+        this.setState({
+          mobileSticky: true
+        });
+      }else{
+        this.setState({
+          mobileSticky: false
         });
       }
     });
@@ -75,7 +86,6 @@ class Navbar extends React.Component {
                           <Link to="/contact" className="hover">Contact</Link>
                         </li>
                       </ul>
-                      
                     </div>   
                     
                     <button className="navbar-toggle" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>
@@ -116,7 +126,7 @@ class Navbar extends React.Component {
             <div className="head-container">
               <div className="header-holder">
 
-              <Link to="/microgreens" className="hover"><img src={Logo} alt=""  /></Link>
+              <Link to="/" className="hover"><img src={Logo} alt=""  /></Link>
       
                 <div className="navlink">
                   <ul className="nav-list capitalize" >
@@ -156,29 +166,82 @@ class Navbar extends React.Component {
             
           </div>
 
-          <div className={this.state.sticky ? "header sticky": 'hidden'}>
-            <div className="head-container">
-              <div className="header-holder">
+          <div className={this.state.desktopSticky ? "header sticky": 'hidden'}>
+            <div className="desktop-header">
+              <div className="head-container">
+                <div className="header-holder">
 
-                <a className="logo logo-alignment" href="/"><img src={Logo} alt=""  /></a>
-      
-                <div className="navlink">
-                  <ul className="nav-list capitalize" >
-                    <li>
-                        <Link to="/" className="hover">Home</Link>
-                      </li>
-                      <li> 
-                        <Link to="/items" className="hover">Items</Link>
-                      </li>
+                  <a className="logo logo-alignment" href="/"><img src={Logo} alt=""  /></a>
+        
+                  <div className="navlink">
+                    <ul className="nav-list capitalize" >
                       <li>
-                        <Link to="/about" className="hover">About</Link> 
+                          <Link to="/" className="hover">Home</Link>
+                        </li>
+                        <li> 
+                          <Link to="/items" className="hover">Items</Link>
+                        </li>
+                        <li>
+                          <Link to="/about" className="hover">About</Link> 
+                        </li>
+                        <li> 
+                          <Link to="/contact" className="hover">Contact</Link>
                       </li>
-                      <li> 
-                        <Link to="/contact" className="hover">Contact</Link>
-                    </li>
-                  </ul>
+                    </ul>
+                  </div>
+        
+                  <div className="flex">
+                    <button className='' onClick={() => this.setSearchBar()}>
+                      {this.state.searchBar ?              
+                        "":
+                        <i className="fa fa-search icon-circle hover"></i> }
+                    </button>     
+                    <i className="fa fa-user icon-circle"></i>
+                    <div className="cart">
+                      <a href="/cart" className="">
+                        <i className="fa fa-shopping-bag icon-circle"></i>
+                        <span>{this.props.cartItem}</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-      
+              </div>
+            </div>
+          </div>
+
+          <div className={this.state.mobileSticky ? "mobile-header sticky": 'hidden'}>
+            <div className="container-fluid">
+              <div className="header-row">
+                <div className="mobile-parent-menu">
+                  <div className="menu-toggle">
+                    <div className="mobil-navbar">
+                      <ul className={this.state.mobileMenu ? "nav-links-MobileMenu" : "hidden"} >
+                        <li>
+                          <button className="navbar-toggle" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>
+                            <i className="fas fa-bars navbar-toggle hover"></i>
+                          </button>  
+                        </li>
+                        <li>
+                          <Link to="/" className="hover">Home</Link>
+                        </li>
+                        <li> 
+                          <Link to="/items" className="hover">Items</Link>
+                        </li>
+                        <li>
+                          <Link to="/about" className="hover">About</Link> 
+                        </li>
+                        <li> 
+                          <Link to="/contact" className="hover">Contact</Link>
+                        </li>
+                      </ul>
+                    </div>   
+                    
+                    <button className="navbar-toggle" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>
+                        <i className="fas fa-bars navbar-toggle hover"></i>
+                    </button>                  
+                  </div>
+                </div>
+                <Link to="/" className="hover middle"><img src={Logo} alt=""  /></Link>
                 <div className="flex">
                   <button className='' onClick={() => this.setSearchBar()}>
                     {this.state.searchBar ?              
@@ -193,8 +256,11 @@ class Navbar extends React.Component {
                     </a>
                   </div>
                 </div>
+
               </div>
             </div>
+            
+            <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>    
           </div>
 
           <div className={this.state.mobileMenu ? "overlay" : "hidden"} onClick={() => this.setMobileMenu()}></div>
