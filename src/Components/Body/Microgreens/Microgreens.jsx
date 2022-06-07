@@ -8,7 +8,6 @@ class Microgreens extends React.Component{
         return(
             <>
                 <ItemList item={items}/>
-                <div>HELOLOLOLOL</div>
             </>
         )
     }
