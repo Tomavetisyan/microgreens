@@ -66,7 +66,7 @@ class Navbar extends React.Component {
                           <Link to="/" className="hover">Home</Link>
                         </li>
                         <li> 
-                          <Link to="/items" className="hover">Microgreens</Link>
+                          <Link to="/items" className="hover">Items</Link>
                         </li>
                         <li>
                           <Link to="/about" className="hover">About</Link> 
@@ -121,17 +121,17 @@ class Navbar extends React.Component {
                 <div className="navlink">
                   <ul className="nav-list capitalize" >
                     <li>
-                      <Link to="/" className="hover">Home</Link>
-                    </li>
-                    <li> 
-                      <Link to="/Microgreens" className="hover">Microgreens</Link>
-                    </li>
-                    <li>
-                      <Link to="/About" className="hover">About</Link> 
-                    </li>
-                    <li> 
-                      <Link to="/Contact" className="hover">Contact</Link>
-                    </li>
+                          <Link to="/" className="hover">Home</Link>
+                        </li>
+                        <li> 
+                          <Link to="/items" className="hover">Items</Link>
+                        </li>
+                        <li>
+                          <Link to="/about" className="hover">About</Link> 
+                        </li>
+                        <li> 
+                          <Link to="/contact" className="hover">Contact</Link>
+                      </li>
                   </ul>
                 </div>
       
