@@ -1,8 +1,8 @@
 {
-  "homepage": "https://tomavetisyan.github.io/Microgreens",
+  "homepage": "https://tomavetisyan.github.io/microgreens",
   "name": "microgreens",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/core": "^10.1.1",
     "@emotion/css": "^11.9.0",
