@@ -11,7 +11,7 @@ class Navbar extends React.Component {
     this.state = {
       mobileMenu: false,
       searchBar: false,
-      desktopSticky: false
+      desktopSticky: false,
     };
     this.setMobileMenu = this.setMobileMenu.bind(this);
     this.setSearchBar = this.setSearchBar.bind(this);

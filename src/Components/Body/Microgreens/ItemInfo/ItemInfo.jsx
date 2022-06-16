@@ -9,10 +9,10 @@ class ItemInfo extends React.Component{
         super(props);
 
         this.state =  {
-            imageSrc: '',
-            name: '',
-            price: '',
-      
+            imageSrc: this.props.imageSrc,
+            name: this.props.name,
+            price: this.props.price,
+            description: this.props.description
           };
 
     }
@@ -22,12 +22,14 @@ class ItemInfo extends React.Component{
             localStorage.setItem('imageSrc', this.props.imageSrc)
             localStorage.setItem('name', this.props.name)
             localStorage.setItem('price', this.props.price)
+            localStorage.setItem('description', this.props.description)
         }
-
+        console.log(localStorage.getItem('description'))
         this.setState({ 
             imageSrc: localStorage.getItem('imageSrc'),
             name: localStorage.getItem('name'),
             price: localStorage.getItem('price'),
+            description: localStorage.getItem('description')
         })
 
     }
@@ -60,11 +62,10 @@ class ItemInfo extends React.Component{
                     </div>
                     <div className="info-container column-xs-12 column-md-5 ">
                         <h1>{this.state.name}</h1>
-                        <h2>{this.state.price}</h2>
                         <div className="description">
-                        <p>The purposes of bonsai are primarily contemplation for the viewer, and the pleasant exercise of effort and ingenuity for the grower.</p>
-                        <p>By contrast with other plant cultivation practices, bonsai is not intended for production of food or for medicine. Instead, bonsai practice focuses on long-term cultivation and shaping of one or more small trees growing in a container.</p>
+                            <p>{this.state.description}</p>
                         </div>
+                        <h2>{this.state.price}</h2>
                         <AddItem />
                     </div>
                     </div>

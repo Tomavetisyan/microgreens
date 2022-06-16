@@ -8,7 +8,7 @@ class Header extends React.Component {
     return (
       <div>
         <Head />
-        <Navbar cartItem ={0}/>
+        <Navbar cartItem ={this.props.cartItem}/>
       </div>
     )
   }

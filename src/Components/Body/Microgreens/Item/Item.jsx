@@ -10,13 +10,14 @@ class Item extends React.Component{
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(imageSrc, name, price){
-        this.props.itemInfo(imageSrc, name, price);
+    handleClick(imageSrc, name, price, description){
+        this.props.itemInfo(imageSrc, name, price, description);
     }
     render(){
         return(
             <div className="Item">
-                <Link to={`/items/ItemInfo`} className="image-container" onClick={() => this.handleClick(this.props.item.imageSrc, this.props.item.name, this.props.item.price) }>
+                <Link to={`/items/ItemInfo`} className="image-container" onClick={() => this.handleClick(this.props.item.imageSrc, this.props.item.name, this.props.item.price,
+                    this.props.item.description) }>
                     <img src={this.props.item.imageSrc} alt=''/>
                 </Link>
                 <h2>{this.props.item.name}</h2>
@@ -24,7 +25,7 @@ class Item extends React.Component{
                     <h3>{this.props.item.price}</h3>
                 </div>
                 <div className="add-item">
-                    <AddItem />
+                    <AddItem cartItem={this.props.cartItem}/>
                 </div>
             </div>
         )
