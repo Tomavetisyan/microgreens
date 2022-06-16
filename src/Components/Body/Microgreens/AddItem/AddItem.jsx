@@ -4,7 +4,7 @@ import './AddItem.css'
 class AddItem extends React.Component{
     render(){
         return(
-            <>
+            <div>
                 <div className="item">
                     <div className="input-container ">
                         <button>
@@ -22,13 +22,13 @@ class AddItem extends React.Component{
                 </div>
                 <div>
                     <div className="add-container">
-                        <button>
+                        <button className="add-to-cart">
                             <i class="fa fa-bag-shopping"></i> <span>ADD TO CART</span>
                         </button>
                     </div>
                 </div>
                 
-            </>
+            </div>
         )
     }
 }

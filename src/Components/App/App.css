@@ -12,8 +12,14 @@ div{
   display: block;
 }
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #ffffff;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #888;
+  background: #fff;
+  text-rendering: optimizeLegibility;
 }
 
 .hover:hover{

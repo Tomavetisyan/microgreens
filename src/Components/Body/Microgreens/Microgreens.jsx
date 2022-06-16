@@ -12,9 +12,9 @@ class Microgreens extends React.Component{
         return(
             <>
                 <div className="bread-container">
-                    <ol class="breadcrumb-list">
-                                <li class="breadcrumb-item"><Link to="/" className="hover">Home</Link></li>
-                                <li class="breadcrumb-item">Items</li>
+                    <ol className="breadcrumb-list">
+                        <li className="breadcrumb-item"><Link to="/" className="hover">Home</Link></li>
+                        <li className="breadcrumb-item">Items</li>
                     </ol>
                 </div>
 

@@ -18,7 +18,11 @@
   }
   
   .Item-price {
-    
+    margin-bottom: 10px;
+  }
+
+  .add-item{
+    margin-bottom: 10px;
   }
   
 
