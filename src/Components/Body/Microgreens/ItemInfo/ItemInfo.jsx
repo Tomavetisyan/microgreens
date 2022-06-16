@@ -35,15 +35,15 @@ class ItemInfo extends React.Component{
             <div>
                 <div class="container">
                     <div class="grid second-nav">
-                    <div class="column-xs-12">
-                        <nav>
-                        <ol class="breadcrumb-list">
-                            <li class="breadcrumb-item"><Link to="/" className="hover">Home</Link></li>
-                            <li class="breadcrumb-item"><Link to="/items" className="hover">Items</Link></li>
-                            <li class="breadcrumb-item active">{this.state.name}</li>
-                        </ol>
-                        </nav>
-                    </div>
+                        <div class="column-xs-12">
+                            <nav>
+                            <ol class="breadcrumb-list">
+                                <li class="breadcrumb-item"><Link to="/" className="hover">Home</Link></li>
+                                <li class="breadcrumb-item"><Link to="/items" className="hover">Items</Link></li>
+                                <li class="breadcrumb-item active">{this.state.name}</li>
+                            </ol>
+                            </nav>
+                        </div>
                     </div>
                     <div class="grid product">
                     <div class="product-container column-xs-12 column-md-5">
