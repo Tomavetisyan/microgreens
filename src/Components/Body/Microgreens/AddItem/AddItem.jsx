@@ -30,10 +30,10 @@ class AddItem extends React.Component{
 
     render(){
         return(
-            <div>
+            <>
                 <div className="item">
                     <div className="input-container ">
-                        <button onClick={this.onclick.bind(this, 'minus')}>
+                        <button onClick={this.onclick.bind(this, 'minus')} className="minus-btn">
                             <i className="fa-solid fa-minus"></i>
                         </button>
 
@@ -44,7 +44,7 @@ class AddItem extends React.Component{
                             onChange={(e) => {this.setCount(e)}}
                             value={this.state.count}/>
 
-                        <button onClick={this.onclick.bind(this, 'add')}>
+                        <button onClick={this.onclick.bind(this, 'add')} className="plus-btn">
                             <i className="fa-solid fa-plus"></i>
                         </button>
                     </div>  
@@ -57,7 +57,7 @@ class AddItem extends React.Component{
                     </div>
                 </div>
                 
-            </div>
+            </>
         )
     }
 }

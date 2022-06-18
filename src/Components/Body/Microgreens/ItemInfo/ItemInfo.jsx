@@ -7,30 +7,47 @@ import AddItem from "../AddItem/AddItem";
 class ItemInfo extends React.Component{
     constructor(props){
         super(props);
-
+        this.headerRef = React.createRef();
         this.state =  {
             imageSrc: this.props.imageSrc,
             name: this.props.name,
             price: this.props.price,
-            description: this.props.description
+            description: this.props.description,
+            height: 0,
           };
 
     }
 
     componentDidMount() {
+        
+        
+        // maxHeight+=147
         if(this.props.imageSrc){
             localStorage.setItem('imageSrc', this.props.imageSrc)
             localStorage.setItem('name', this.props.name)
             localStorage.setItem('price', this.props.price)
             localStorage.setItem('description', this.props.description)
         }
-        console.log(localStorage.getItem('description'))
         this.setState({ 
             imageSrc: localStorage.getItem('imageSrc'),
             name: localStorage.getItem('name'),
             price: localStorage.getItem('price'),
             description: localStorage.getItem('description')
         })
+
+        window.addEventListener('scroll', () => {
+            let imageHeight = this.imageHeight.clientHeight;
+        
+            let maxHeight = this.divElement.clientHeight - imageHeight;
+            console.log(imageHeight)
+            if(window.pageYOffset > 147 && window.pageYOffset < maxHeight){
+                this.setState({
+                    height: window.pageYOffset - 147
+                });
+            }else{
+
+            }
+          });
 
     }
 
@@ -47,27 +64,38 @@ class ItemInfo extends React.Component{
                     </div>
                 </div>
                 <div className="iteminfo-container">
-                    <div className="grid product">
-                    <div className="product-container column-xs-12 column-md-5">
-                        <div className="product-gallery">
-                        <div className="product-image">
-                            <img className="active" src={this.state.imageSrc}/>
+                    <div className="product" ref={ (divElement) => { this.divElement = divElement }}>
+                        <div className="product-container">
+                            <div className="product-gallery" style={{top: this.state.height}}>
+                                <div className="product-image"  ref={ (imageHeight) => { this.imageHeight = imageHeight }}>
+                                    <img className="active" src={this.state.imageSrc} />
+                                </div>
+                                <div className="image-list">
+                                    <ul className="image-list-container">
+                                        <li className="image-item"><img src={this.state.imageSrc} /></li>
+                                        <li className="image-item"><img src={this.state.imageSrc} /></li>
+                                        <li className="image-item"><img src={this.state.imageSrc} /></li>
+                                    </ul>
+                                </div>
+
+                            </div>
                         </div>
-                        <ul className="image-list">
-                            <li className="image-item"><img src={this.state.imageSrc} /></li>
-                            <li className="image-item"><img src={this.state.imageSrc} /></li>
-                            <li className="image-item"><img src={this.state.imageSrc} /></li>
-                        </ul>
+                        <div className="info-container">
+                            <h1>{this.state.name}</h1>
+                            <div className="price">
+                                <span>{this.state.price}</span>
+                            </div>
+                            <div className="item-information">
+                                <a href="" className="shipping"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shipping</a>
+                                <a href="" className="email"><i class="fa fa-envelope" aria-hidden="true"></i> Ask about this product</a>
+                            </div>
+                            <div className="info-add-item">
+                                <AddItem />
+                            </div>
+                            <div className="description">
+                                <p>{this.state.description}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="info-container column-xs-12 column-md-5 ">
-                        <h1>{this.state.name}</h1>
-                        <div className="description">
-                            <p>{this.state.description}</p>
-                        </div>
-                        <h2>{this.state.price}</h2>
-                        <AddItem />
-                    </div>
                     </div>
                     <div className="related-products">
                         <div className="column-xs-12">
