@@ -8,6 +8,7 @@ class ItemInfo extends React.Component{
     constructor(props){
         super(props);
         this.headerRef = React.createRef();
+        
         this.state =  {
             imageSrc: this.props.imageSrc,
             name: this.props.name,
@@ -18,9 +19,7 @@ class ItemInfo extends React.Component{
 
     }
 
-    componentDidMount() {
-        
-        
+    componentDidMount() {    
         // maxHeight+=147
         if(this.props.imageSrc){
             localStorage.setItem('imageSrc', this.props.imageSrc)
@@ -36,19 +35,22 @@ class ItemInfo extends React.Component{
         })
 
         window.addEventListener('scroll', () => {
-            let imageHeight = this.imageHeight.clientHeight;
-        
+            let imageHeight = this.imageHeight.clientHeight;  
             let maxHeight = this.divElement.clientHeight - imageHeight;
-            console.log(imageHeight)
-            if(window.pageYOffset > 147 && window.pageYOffset < maxHeight){
+            let maxWidth = this.divElement.clientWidth;
+            
+            console.log(maxHeight)
+            console.log(this.state.height)
+            if(window.pageYOffset > 120 && window.pageYOffset < maxHeight && maxWidth > 850.41){
                 this.setState({
-                    height: window.pageYOffset - 147
+                    height: window.pageYOffset - 120
                 });
-            }else{
-
+            }else if(window.pageYOffset < 120 ){
+                this.setState({
+                    height: 0
+                });
             }
           });
-
     }
 
     render(){
@@ -66,17 +68,23 @@ class ItemInfo extends React.Component{
                 <div className="iteminfo-container">
                     <div className="product" ref={ (divElement) => { this.divElement = divElement }}>
                         <div className="product-container">
-                            <div className="product-gallery" style={{top: this.state.height}}>
-                                <div className="product-image"  ref={ (imageHeight) => { this.imageHeight = imageHeight }}>
-                                    <img className="active" src={this.state.imageSrc} />
-                                </div>
+                            <div className="product-gallery" style={{top: this.state.height}} ref={ (imageHeight) => { this.imageHeight = imageHeight }}>
                                 <div className="image-list">
                                     <ul className="image-list-container">
                                         <li className="image-item"><img src={this.state.imageSrc} /></li>
                                         <li className="image-item"><img src={this.state.imageSrc} /></li>
                                         <li className="image-item"><img src={this.state.imageSrc} /></li>
+                                        <li className="image-item"><img src={this.state.imageSrc} /></li>
+                                        <li className="image-item"><img src={this.state.imageSrc} /></li>
                                     </ul>
+                                </div>                               
+                                <div className="product-image desktop"  >
+                                    <img className="active" src={this.state.imageSrc} />
                                 </div>
+                                <div className="product-image mobile">
+                                    <img className="active" src={this.state.imageSrc} />
+                                </div>
+
 
                             </div>
                         </div>
@@ -86,11 +94,15 @@ class ItemInfo extends React.Component{
                                 <span>{this.state.price}</span>
                             </div>
                             <div className="item-information">
-                                <a href="" className="shipping"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shipping</a>
-                                <a href="" className="email"><i class="fa fa-envelope" aria-hidden="true"></i> Ask about this product</a>
+                                <div>
+                                    <a href="" className="shipping"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shipping</a>
+                                </div>
+                                <div>
+                                    <a href="" className="email"><i class="fa fa-envelope" aria-hidden="true"></i> Ask about this product</a>
+                                </div>
                             </div>
                             <div className="info-add-item">
-                                <AddItem />
+                                <AddItem cartItem={this.props.cartItem}/>
                             </div>
                             <div className="description">
                                 <p>{this.state.description}</p>

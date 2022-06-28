@@ -6,7 +6,7 @@ class AddItem extends React.Component{
         super(props);
 
         this.state={
-            count: 0
+            count: 1
         };
         this.setCount = this.setCount.bind(this);
     }
@@ -23,7 +23,7 @@ class AddItem extends React.Component{
 
     onclick(type){
         this.setState(prevState => {
-           return {count: (type == 'add' ? prevState.count + 1: prevState.count > 0 ? prevState.count - 1 : 0)}
+           return {count: (type == 'add' ? prevState.count + 1: prevState.count > 1 ? prevState.count - 1 : 1)}
         });
         console.log(this.state.count)
     }

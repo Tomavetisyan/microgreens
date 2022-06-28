@@ -74,16 +74,16 @@ class Navbar extends React.Component {
                           </button>  
                         </li>
                         <li>
-                          <Link to="/" className="hover">Home</Link>
+                          <Link to="/" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Home</Link>
                         </li>
                         <li> 
-                          <Link to="/items" className="hover">Items</Link>
+                          <Link to="/items" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Items</Link>
                         </li>
                         <li>
-                          <Link to="/about" className="hover">About</Link> 
+                          <Link to="/about" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>About</Link> 
                         </li>
                         <li> 
-                          <Link to="/contact" className="hover">Contact</Link>
+                          <Link to="/contact" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Contact</Link>
                         </li>
                       </ul>
                     </div>   
@@ -111,7 +111,7 @@ class Navbar extends React.Component {
               </div>
             </div>
             
-            <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>    
+            {/* <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>     */}
             
             <div className="container-fluid top-line">
               <div className="logo-container">
@@ -162,7 +162,7 @@ class Navbar extends React.Component {
               </div>
             </div>
             
-            <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>    
+            {/* <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>     */}
             
           </div>
 
@@ -254,10 +254,12 @@ class Navbar extends React.Component {
               </div>
             </div>
             
-            <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>    
+              
           </div>
 
-          <div className={this.state.mobileMenu ? "overlay" : "hidden"} onClick={() => this.setMobileMenu()}></div>
+          <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>  
+          <div className={this.state.mobileMenu ? "overlay" : this.state.searchBar ? "overlay":"hidden"} onClick={() => this.setMobileMenu()}></div>
+          
         </header>
       </div>
     )

@@ -27,6 +27,10 @@ body {
   cursor: pointer;
 }
 
+.background:hover{
+  background-color: #3d3e3f;
+}
+
 a {
   text-decoration: none;
   color: black;

@@ -12,6 +12,7 @@ class Search extends React.Component {
   render(){
     return (
       <div className={this.props.searchBar ? 'search-bar' : 'hidden'}>
+        <div className='search-bar-container'>
           <section className="search">
             <div className="search-box">
               <input type="text" placeholder='Search and hit enter...'  />
@@ -24,6 +25,7 @@ class Search extends React.Component {
             </div>
           </section>
         </div>
+      </div>
     )
   }
 }
