@@ -3,7 +3,6 @@
   height: 500px;
   position: relative;
   overflow: hidden;
-  background-color: #82954B;
 }
 
 .slide {
@@ -61,11 +60,12 @@
   max-width: 350px;
   min-width: 150px;
   color: #fff;
-  padding: 1rem;
+  padding: 5px;
   background: rgba(0, 0, 0, 0.3);
   /* animation-delay: 1s; */
   animation-fill-mode: forwards;
   font-size: 14px;
+  text-align: center;
 }
 .content button:hover{
   color: #EFD345;
@@ -79,12 +79,6 @@
   100% {
     visibility: visible;
     top: 17rem;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .content {
-    
   }
 }
 
@@ -117,11 +111,11 @@
 
 .next {
   top: 35%;
-  right: 1.5rem;
+  right: 3rem;
 }
 .prev {
   top: 35%;
-  left: 1.5rem;
+  left: 3rem;
 }
 
 hr {
@@ -129,3 +123,18 @@ hr {
   background: white;
   width: 50%;
 }
+
+@media (max-width: 1080px) {
+  .content {
+    left: 0;
+    width: 100%;
+    
+  }
+  .slide {
+    max-height: 475px;
+  }
+  .arrow{
+    display: none;
+  }
+}
+

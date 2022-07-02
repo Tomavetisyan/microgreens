@@ -66,40 +66,53 @@ class Navbar extends React.Component {
               <div className="header-row">
                 <div className="mobile-parent-menu">
                   <div className="menu-toggle">
-                    <div className="mobil-navbar">
-                      <ul className={this.state.mobileMenu ? "nav-links-MobileMenu" : "hidden"} >
-                        <li>
+                    <div className="mobile-navbar">
+                      <div className={this.state.mobileMenu ? "nav-links-MobileMenu" : "hidden"}>
+                        <div className="close">
                           <button className="navbar-toggle" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>
-                            <i className="fas fa-bars navbar-toggle hover"></i>
-                          </button>  
-                        </li>
-                        <li>
-                          <Link to="/" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Home</Link>
-                        </li>
-                        <li> 
-                          <Link to="/items" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Items</Link>
-                        </li>
-                        <li>
-                          <Link to="/about" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>About</Link> 
-                        </li>
-                        <li> 
-                          <Link to="/contact" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Contact</Link>
-                        </li>
-                      </ul>
+                              <i className="fa-solid fa-x hover"></i>
+                          </button> 
+                        </div>
+                        
+                        <ul className= "top" >
+                          <li>
+                            <Link to="/" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Home</Link>
+                          </li>
+                          <li> 
+                            <Link to="/items" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Items</Link>
+                          </li>
+                          <li>
+                            <Link to="/about" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>About</Link> 
+                          </li>
+                          <li> 
+                            <Link to="/contact" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Contact</Link>
+                          </li>
+                        </ul>
+                        <ul className="bottom">
+                          <li className="">
+                            <Link to="/account" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Account</Link>
+                          </li>
+                          <li className="">
+                            <Link to="/settings" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Settings</Link>
+                          </li>
+                          <li className="">
+                            <a to="/" className="width hover" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>Sign out</a>
+                          </li>
+                        </ul>
+                      </div>
+                      
                     </div>   
                     
                     <button className="navbar-toggle" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>
-                        <i className="fas fa-bars navbar-toggle hover"></i>
+                        <i className="fas fa-bars hover"></i>
                     </button>                  
                   </div>
                 </div>
+                <div className="search">
+                  <input type="search" placeholder='Search' className="searchbar" />
+                  <i className="fa fa-search hover"></i>
+                </div>
                 <div className="flex">
-                  <button className='' onClick={() => this.setSearchBar()}>
-                    {this.state.searchBar ?              
-                      "":
-                      <i className="fa fa-search icon-circle hover"></i> }
-                  </button>     
-                  <i className="fa fa-user icon-circle"></i>
                   <div className="cart">
                     <a href="/cart" className="">
                       <i className="fa fa-shopping-bag icon-circle"></i>
@@ -113,7 +126,7 @@ class Navbar extends React.Component {
             
             {/* <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>     */}
             
-            <div className="container-fluid top-line">
+            <div className="top-line">
               <div className="logo-container">
                 <a className="logo logo-alignment" href="/">
                   <img src={Logo} alt=""  />
@@ -214,7 +227,7 @@ class Navbar extends React.Component {
               <div className="header-row">
                 <div className="mobile-parent-menu">
                   <div className="menu-toggle">
-                    <div className="mobil-navbar">
+                    <div className="mobile-navbar">
                       <ul className={this.state.mobileMenu ? "nav-links-MobileMenu" : "hidden"} >
                         <li>
                           <button className="navbar-toggle" onClick={() => this.setMobileMenu(!this.state.mobileMenu)}>
@@ -257,7 +270,6 @@ class Navbar extends React.Component {
               
           </div>
 
-          <Search searchBar={this.state.searchBar} setSearchBar={() => this.setSearchBar()}/>  
           <div className={this.state.mobileMenu ? "overlay" : this.state.searchBar ? "overlay":"hidden"} onClick={() => this.setMobileMenu()}></div>
           
         </header>

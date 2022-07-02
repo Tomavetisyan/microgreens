@@ -39,8 +39,6 @@ class ItemInfo extends React.Component{
             let maxHeight = this.divElement.clientHeight - imageHeight;
             let maxWidth = this.divElement.clientWidth;
             
-            console.log(maxHeight)
-            console.log(this.state.height)
             if(window.pageYOffset > 120 && window.pageYOffset < maxHeight && maxWidth > 850.41){
                 this.setState({
                     height: window.pageYOffset - 120

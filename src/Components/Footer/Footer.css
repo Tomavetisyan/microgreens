@@ -1,0 +1,20 @@
+.footer{
+    border-top: 0.0625rem solid #e3dddd;
+    margin-top: 10px;
+}
+    .footer-container{
+        text-align: center;
+    }
+        .icons{
+            
+        }
+            .icons a{
+               margin: 5px;
+            }
+        .newsletter{
+
+        }
+            .newsletter input{
+                border: 0.1rem solid #e3dddd; 
+            }
+    

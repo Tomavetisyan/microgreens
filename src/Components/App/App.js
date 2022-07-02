@@ -10,6 +10,7 @@ import {
 import Home from '../Body/Home/Home';
 import Microgreens from '../Body/Microgreens/Microgreens';
 import ItemInfo from '../Body/Microgreens/ItemInfo/ItemInfo';
+import Footer from '../Footer/Footer'
 
 class App extends React.Component {
   constructor() {
@@ -56,6 +57,7 @@ class App extends React.Component {
                             price={this.state.price} description={this.state.description} cartItem={this.cartItem}/>} />
               </Routes>
             </div>
+            <Footer />
           </Router>
       </>
     );

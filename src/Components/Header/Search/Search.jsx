@@ -11,7 +11,7 @@ class Search extends React.Component {
   }
   render(){
     return (
-      <div className={this.props.searchBar ? 'search-bar' : 'hidden'}>
+      <div className='search-bar'>
         <div className='search-bar-container'>
           <section className="search">
             <div className="search-box">
@@ -19,9 +19,6 @@ class Search extends React.Component {
               <button>
                 <i className="fa fa-search hover"></i>
               </button>
-              <button  onClick={() => this.setSearchBar()}>
-                <i className="fa-solid fa-x hover"></i>
-              </button> 
             </div>
           </section>
         </div>

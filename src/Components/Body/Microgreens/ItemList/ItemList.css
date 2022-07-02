@@ -4,3 +4,9 @@
     flex-wrap: wrap;
     margin: 1rem 10%;
   }
+
+  @media (max-width: 1080px) {
+    .ItemList {
+      margin: 1rem 1%;
+    }
+  }
