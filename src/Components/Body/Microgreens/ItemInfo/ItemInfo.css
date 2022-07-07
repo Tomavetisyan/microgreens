@@ -43,7 +43,6 @@
 }
   .product{
     display: flex;
-    border-bottom: 0.0625rem solid #e3dddd;
   }
     .product-container{  
       max-width: 60%;
@@ -131,9 +130,6 @@
           text-align: center;
         }
 
-.grid.menu, .grid.product {
-  border-bottom: 0.0625rem solid #e3dddd;
-}
 .grid.menu > [class*="column-"] {
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
@@ -148,14 +144,8 @@ footer {
   text-align: center;
 }
 
-.products{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.products div{
-  margin: 10px;
-}
+
+
 
 @media (max-width: 1080px) {
   .desktop{

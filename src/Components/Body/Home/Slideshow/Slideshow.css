@@ -54,7 +54,8 @@
   z-index: 9999;
   position: absolute;
   bottom: 8px;
-  left: 5%;
+  left: 50%;
+  transform: translate(-50%, 0) !important;
   opacity: 0;
   width: 35%;
   max-width: 350px;
@@ -62,7 +63,6 @@
   color: #fff;
   padding: 5px;
   background: rgba(0, 0, 0, 0.3);
-  /* animation-delay: 1s; */
   animation-fill-mode: forwards;
   font-size: 14px;
   text-align: center;
@@ -126,9 +126,7 @@ hr {
 
 @media (max-width: 1080px) {
   .content {
-    left: 0;
-    width: 100%;
-    
+    width: 260px;
   }
   .slide {
     max-height: 475px;

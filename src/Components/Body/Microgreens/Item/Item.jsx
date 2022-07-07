@@ -11,12 +11,13 @@ class Item extends React.Component{
     }
 
     handleClick(imageSrc, name, price, description){
+        
         this.props.itemInfo(imageSrc, name, price, description);
     }
     render(){
         return(
             <div className="Item">
-                <Link to={`/items/ItemInfo`} className="image-container" onClick={() => this.handleClick(this.props.item.imageSrc, this.props.item.name, this.props.item.price,
+                <Link to={`/items/${this.props.item.id}`} className="image-container" onClick={() => this.handleClick(this.props.item.imageSrc, this.props.item.name, this.props.item.price,
                     this.props.item.description) }>
                     <img src={this.props.item.imageSrc} alt=''/>
                 </Link>

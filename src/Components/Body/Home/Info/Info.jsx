@@ -4,7 +4,7 @@ import './Info.css'
 class Info extends React.Component{
     render(){
         return(
-            <div className="info center indent">
+            <div className="info center">
                 <h1 >MicroGreeny</h1>
                 <h2>About us</h2>
                 <p>Insert text here</p>

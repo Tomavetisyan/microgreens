@@ -18,7 +18,7 @@ class Microgreens extends React.Component{
                     </ol>
                 </div>
 
-                <ItemList item={items} itemInfo={this.props.itemInfo} cartItem={this.props.cartItem}/>
+                <ItemList item={this.props.item} itemInfo={this.props.itemInfo} cartItem={this.props.cartItem}/>
             </>
         )
     }

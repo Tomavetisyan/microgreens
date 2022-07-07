@@ -1,0 +1,28 @@
+.suggestedItems{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1250px;
+}
+.suggestedItems .header{
+    margin: 35px 0;
+}
+.Item{
+    max-width: 250px;
+}
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 1080px) {
+    .suggestedItems{
+        height: 450px;
+    }
+    .products-container{
+        position: absolute;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+}

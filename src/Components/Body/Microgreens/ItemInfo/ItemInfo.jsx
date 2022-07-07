@@ -2,6 +2,7 @@ import React from "react";
 import './ItemInfo.css'
 import { Link } from "react-router-dom";
 import AddItem from "../AddItem/AddItem";
+import SuggestedItems from '../SuggestedItems/SuggestedItems'
 
 
 class ItemInfo extends React.Component{
@@ -20,7 +21,7 @@ class ItemInfo extends React.Component{
     }
 
     componentDidMount() {    
-        // maxHeight+=147
+        console.log(this.state)
         if(this.props.imageSrc){
             localStorage.setItem('imageSrc', this.props.imageSrc)
             localStorage.setItem('name', this.props.name)
@@ -49,6 +50,20 @@ class ItemInfo extends React.Component{
                 });
             }
           });
+    }
+    componentDidUpdate(prevProps, prevState){
+        if (prevProps.imageSrc !== this.props.imageSrc){
+            localStorage.setItem('imageSrc', this.props.imageSrc)
+            localStorage.setItem('name', this.props.name)
+            localStorage.setItem('price', this.props.price)
+            localStorage.setItem('description', this.props.description)
+            this.setState({ 
+                imageSrc: this.props.imageSrc,
+                name: this.props.name,
+                price: this.props.price,
+                description: this.props.description,
+            })
+        }
     }
 
     render(){
@@ -107,44 +122,9 @@ class ItemInfo extends React.Component{
                             </div>
                         </div>
                     </div>
-                    <div className="related-products">
-                        <div className="column-xs-12">
-                            <h3>You may also like</h3>
-                        </div>
-                        <div className="products">
-                            <div className="column-xs-12 column-md-4">
-                                <img src={this.state.imageSrc}/>
-                                <h4>{this.state.name}</h4>
-                                <p className="price">{this.state.price}</p>
-                            </div>
-                            <div className="column-xs-12 column-md-4">
-                                <img src={this.state.imageSrc}/>
-                                <h4>{this.state.name}</h4>
-                                <p className="price">{this.state.price}</p>
-                            </div>
-                            <div className="column-xs-12 column-md-4">
-                                <img src={this.state.imageSrc}/>
-                                <h4>{this.state.name}</h4>
-                                <p className="price">{this.state.price}</p>
-                            </div>
-                            <div className="column-xs-12 column-md-4">
-                                <img src={this.state.imageSrc}/>
-                                <h4>{this.state.name}</h4>
-                                <p className="price">{this.state.price}</p>
-                            </div>
-                            <div className="column-xs-12 column-md-4">
-                                <img src={this.state.imageSrc}/>
-                                <h4>{this.state.name}</h4>
-                                <p className="price">{this.state.price}</p>
-                            </div>
-                            <div className="column-xs-12 column-md-4">
-                                <img src={this.state.imageSrc}/>
-                                <h4>{this.state.name}</h4>
-                                <p className="price">{this.state.price}</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                <div className="indent"></div>
+                <SuggestedItems  itemInfo={this.props.itemInfo} cartItem={this.props.cartItem}/>
             </div>
         )
     }

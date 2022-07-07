@@ -11,6 +11,7 @@ import Home from '../Body/Home/Home';
 import Microgreens from '../Body/Microgreens/Microgreens';
 import ItemInfo from '../Body/Microgreens/ItemInfo/ItemInfo';
 import Footer from '../Footer/Footer'
+import items from '../Body/Microgreens/Items';
 
 class App extends React.Component {
   constructor() {
@@ -36,12 +37,14 @@ class App extends React.Component {
   }
 
   itemInfo(imageSrc, name, price, description){
+    
     this.setState({ 
       imageSrc: imageSrc,
       name: name,
       price: price,
       description: description
     })
+   
   }
 
   render() {
@@ -52,11 +55,12 @@ class App extends React.Component {
             <div>
               <Routes >
                 <Route exact path="/" element={<Home />}></Route>     
-                <Route exact path="/items" element={<Microgreens itemInfo={this.itemInfo} cartItem={this.cartItem}/>}></Route>
-                <Route path="/items/ItemInfo" element={<ItemInfo imageSrc={this.state.imageSrc} name={this.state.name} 
+                <Route exact path="/items" element={<Microgreens item={items} itemInfo={this.itemInfo} cartItem={this.cartItem}/>}></Route>
+                <Route path="/items/:id" element={<ItemInfo item={items} itemInfo={this.itemInfo} imageSrc={this.state.imageSrc} name={this.state.name} 
                             price={this.state.price} description={this.state.description} cartItem={this.cartItem}/>} />
               </Routes>
             </div>
+            
             <Footer />
           </Router>
       </>

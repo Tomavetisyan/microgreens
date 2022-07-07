@@ -1,6 +1,7 @@
 .footer{
     border-top: 0.0625rem solid #e3dddd;
     margin-top: 10px;
+    background-color: #f7f8fa;
 }
     .footer-container{
         text-align: center;
@@ -12,9 +13,31 @@
                margin: 5px;
             }
         .newsletter{
-
+            display: block;
         }
+
             .newsletter input{
                 border: 0.1rem solid #e3dddd; 
             }
-    
+    .links{
+       
+    }    
+        .links-container{
+           
+        }  
+            .links ul{
+                display: inline-flex;
+                
+            }    
+                .links li{
+                    margin: 5px 5px;
+                }
+
+@media (max-width: 1080px) {
+    .copyright{
+        text-align: center;
+    }
+        .copyright a{
+            font-size: .9rem;
+        }
+}
