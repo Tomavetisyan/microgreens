@@ -25,25 +25,22 @@ class SuggestedItems extends React.Component{
                 <Carousel responsive={{
                     superLargeDesktop: {
                       // the naming can be any, depends on you.
-                      breakpoint: { max: 4000, min: 3000 },
-                      items: 5
-                    },
-                    desktop: {
                       breakpoint: { max: 3000, min: 1024 },
                       items: 4
                     },
+                    desktop: {
+                        breakpoint: { max: 1250, min: 464 },
+                        items: 3
+                    },
                     tablet: {
-                      breakpoint: { max: 1250, min: 464 },
-                      items: 3
+                        breakpoint: { max: 932, min: 0 },
+                        items: 2
                     },
                     mobile: {
-                      breakpoint: { max: 932, min: 0 },
-                      items: 2
+                        breakpoint: { max: 624, min: 0 },
+                        items: 1
                     },
-                    mobile: {
-                      breakpoint: { max: 624, min: 0 },
-                      items: 1
-                    }
+
                   }} infiniteLoop={true} >
                         {     
                         this.slicedItems(items).map(item =>{
