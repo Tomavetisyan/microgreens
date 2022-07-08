@@ -9,6 +9,7 @@
 }
 .Item{
     max-width: 250px;
+    margin: 0 auto;
 }
 .products-container{
     display: flex;
@@ -19,10 +20,24 @@
 @media (max-width: 1080px) {
     .suggestedItems{
         height: 450px;
+       
     }
     .products-container{
         position: absolute;
         flex-wrap: nowrap;
         overflow: hidden;
+        max-width: 400px;
     }
 }
+.row{
+    display:flex;
+}
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; display:flex;}
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }

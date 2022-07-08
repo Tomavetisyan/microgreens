@@ -2,6 +2,8 @@ import React from "react";
 import './SuggestedItems.css';
 import items from "../Items";
 import { Link } from "react-router-dom";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 class SuggestedItems extends React.Component{
     constructor(props){
@@ -20,11 +22,29 @@ class SuggestedItems extends React.Component{
     render(){
         return(
             <div className="suggestedItems">
-                <div className="header">
-                    <h3>You may like</h3>
-                </div>
-                <div className="products">
-                    <div className="products-container">
+                <Carousel responsive={{
+                    superLargeDesktop: {
+                      // the naming can be any, depends on you.
+                      breakpoint: { max: 4000, min: 3000 },
+                      items: 5
+                    },
+                    desktop: {
+                      breakpoint: { max: 3000, min: 1024 },
+                      items: 4
+                    },
+                    tablet: {
+                      breakpoint: { max: 1250, min: 464 },
+                      items: 3
+                    },
+                    mobile: {
+                      breakpoint: { max: 932, min: 0 },
+                      items: 2
+                    },
+                    mobile: {
+                      breakpoint: { max: 624, min: 0 },
+                      items: 1
+                    }
+                  }} infiniteLoop={true} >
                         {     
                         this.slicedItems(items).map(item =>{
                             return <div className="Item">
@@ -39,10 +59,9 @@ class SuggestedItems extends React.Component{
                                     </div>
                         })
                         }
-                    </div> 
-                </div>
- 
+                </Carousel>
             </div>
+
         )
     }
 }

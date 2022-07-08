@@ -5,6 +5,7 @@
     text-align: center;
     align-items: center;
     border: 3px solid #e3dddd;
+    min-width: 250px;
   }
   
   .Item .image-container {
