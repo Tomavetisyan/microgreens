@@ -22,18 +22,23 @@ class App extends React.Component {
       name: '',
       price: '',
       description: '',
-      cartItem: 0
+      cartItem: 0,
+      cartInfo: {}
     };
 
     this.itemInfo = this.itemInfo.bind(this);
     this.cartItem = this.cartItem.bind(this);
   }
 
-  cartItem(cartItem){
+  cartItem(cartItem, cartInfo){
+    
     this.setState(prevState => {
-      return {cartItem: prevState.cartItem + cartItem}
+      return {cartItem: prevState.cartItem + cartItem,}
     });
-   
+    const newCart = {...this.state.cartInfo, [cartInfo.name]: [cartInfo, ]}
+    this.setState({
+      cartInfo: newCart
+    });
   }
 
   itemInfo(imageSrc, name, price, description){
@@ -45,6 +50,12 @@ class App extends React.Component {
       description: description
     })
    
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.cartInfo !== this.state.cartInfo) {
+      console.log(this.state.cartInfo)
+    }
   }
 
   render() {

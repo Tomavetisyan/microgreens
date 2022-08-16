@@ -10,11 +10,13 @@ class Navbar extends React.Component {
     super(props);
     this.state = {
       mobileMenu: false,
+      cartMenu: false,
       searchBar: false,
       desktopSticky: false,
     };
     this.setMobileMenu = this.setMobileMenu.bind(this);
     this.setSearchBar = this.setSearchBar.bind(this);
+    this.setSearchBar = this.setCartMenu.bind(this);
   }
 
   componentDidMount() {
@@ -50,6 +52,11 @@ class Navbar extends React.Component {
   setMobileMenu(mobileMenu){
     this.setState({
       mobileMenu: mobileMenu,
+    }); 
+  }
+  setCartMenu(cartMenu){
+    this.setState({
+      cartMenu: cartMenu,
     }); 
   }
   setSearchBar(){
@@ -112,13 +119,17 @@ class Navbar extends React.Component {
                   <input type="search" placeholder='Search' className="searchbar" />
                   <i className="fa fa-search hover"></i>
                 </div>
-                <div className="flex">
-                  <div className="cart">
-                    <a href="/cart" className="">
-                      <i className="fa fa-shopping-bag icon-circle"></i>
-                      <span>{this.props.cartItem}</span>
-                    </a>
-                  </div>
+          
+                <div className="hover cart" onClick={() => this.setCartMenu(!this.state.cartMenu)}>
+                    <i className="fa fa-shopping-bag icon-circle"></i>
+                    <span>{this.props.cartItem}</span>  
+                </div>
+                <div className={this.state.cartMenu ? "cartMenu" : "hidden"}>
+                  <div className="cartClose">
+                        <button className="navbar-toggle" onClick={() => this.setCartMenu(!this.state.cartMenu)}>
+                            <i className="fa-solid fa-x hover"></i>
+                        </button> 
+                    </div>
                 </div>
 
               </div>
@@ -128,9 +139,7 @@ class Navbar extends React.Component {
             
             <div className="top-line">
               <div className="logo-container">
-                <a className="logo logo-alignment" href="/">
-                  <img src={Logo} alt=""  />
-                </a>
+                <Link to="/" className="logo logo-alignment"><img src={Logo} alt=""  /></Link>
               </div>
             </div>
           </div>

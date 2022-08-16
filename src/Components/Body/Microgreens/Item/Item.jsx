@@ -26,7 +26,7 @@ class Item extends React.Component{
                     <h3>{this.props.item.price}</h3>
                 </div>
                 <div className="add-item">
-                    <AddItem cartItem={this.props.cartItem}/>
+                    <AddItem cartItem={this.props.cartItem} itemInfo={ this.props.item}/>
                 </div>
             </div>
         )

@@ -108,10 +108,10 @@ class ItemInfo extends React.Component{
                             </div>
                             <div className="item-information">
                                 <div>
-                                    <a href="" className="shipping"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shipping</a>
+                                    <a href="" className="shipping"><i className="fa fa-shopping-bag" aria-hidden="true"></i> Shipping</a>
                                 </div>
                                 <div>
-                                    <a href="" className="email"><i class="fa fa-envelope" aria-hidden="true"></i> Ask about this product</a>
+                                    <a href="" className="email"><i className="fa fa-envelope" aria-hidden="true"></i> Ask about this product</a>
                                 </div>
                             </div>
                             <div className="info-add-item">

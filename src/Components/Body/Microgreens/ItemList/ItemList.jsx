@@ -11,8 +11,8 @@ class ItemList extends React.Component{
             <div className="ItemList">
                 
                     {
-                    this.props.item.map(item =>{
-                        return <Item item={item}  itemInfo={this.props.itemInfo} cartItem={this.props.cartItem}/>
+                    this.props.item.map((item, key) =>{
+                        return <Item item={item} key={key} itemInfo={this.props.itemInfo} cartItem={this.props.cartItem}/>
                     })
                     }
                 

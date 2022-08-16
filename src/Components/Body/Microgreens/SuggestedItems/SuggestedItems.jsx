@@ -22,6 +22,7 @@ class SuggestedItems extends React.Component{
     render(){
         return(
             <div className="suggestedItems">
+                <h3 className="header">You may like</h3>
                 <Carousel responsive={{
                     superLargeDesktop: {
                       // the naming can be any, depends on you.
@@ -44,12 +45,13 @@ class SuggestedItems extends React.Component{
                   }} infiniteLoop={true} >
                         {     
                         this.slicedItems(items).map(item =>{
-                            return <div className="Item">
+                            return <div className="suggestedItem">
                                         <Link to={`/items/${item.id}`} className="image-container" onClick={() => this.handleClick(item.imageSrc, item.name, item.price,
                                             item.description) }>
                                             <img src={item.imageSrc} alt=''/>
                                         </Link>
                                         <h2>{item.name}</h2>
+                                        <h3>{item.weight}</h3>
                                         <div className="Item-price">
                                             <h3>{item.price}</h3>
                                         </div>

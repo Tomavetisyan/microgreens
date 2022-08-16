@@ -11,8 +11,8 @@ class AddItem extends React.Component{
         this.setCount = this.setCount.bind(this);
     }
 
-    handleClick(count){
-        this.props.cartItem(count);
+    handleClick(count, itemInfo){
+        this.props.cartItem(count, itemInfo);
     }
 
     setCount(e){
@@ -25,7 +25,7 @@ class AddItem extends React.Component{
         this.setState(prevState => {
            return {count: (type == 'add' ? prevState.count + 1: prevState.count > 1 ? prevState.count - 1 : 1)}
         });
-        console.log(this.state.count)
+       
     }
 
     render(){
@@ -51,7 +51,7 @@ class AddItem extends React.Component{
                 </div>
                 <div>
                     <div className="add-container">
-                        <button className="add-to-cart" onClick={() => this.handleClick(this.state.count)}>
+                        <button className="add-to-cart" onClick={() => this.handleClick(this.state.count, this.props.itemInfo)}>
                             <i className="fa fa-bag-shopping"></i> <span>ADD TO CART</span>
                         </button>
                     </div>

@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 1rem 10%;
+    margin: 1rem auto;
+    max-width: 1244px;
   }
 
   @media (max-width: 1080px) {

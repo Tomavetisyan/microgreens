@@ -16,16 +16,16 @@ export default function App() {
         <div className='footer-container'>
             <section className='icons'>
                 <a className='btn btn-outline-light btn-floating m-1' href='https://m.facebook.com/microgreeny2022/' role='button'>
-                    <i class="fab fa-facebook-f"></i>
+                    <i className="fab fa-facebook-f"></i>
                 </a>
                 <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
-                    <i class="fab fa-twitter"></i>
+                    <i className="fab fa-twitter"></i>
                 </a>
                 <a className='btn btn-outline-light btn-floating m-1' href='https://www.instagram.com/microgreeny2022/?hl=en' role='button'>
-                    <i class="fab fa-instagram"></i>
+                    <i className="fab fa-instagram"></i>
                 </a>
                 <a className='btn btn-outline-light btn-floating m-1' href='https://www.tiktok.com/@microgreenygirl?lang=en' role='button'>
-                    <i class="fa-brands fa-tiktok"></i>
+                    <i className="fa-brands fa-tiktok"></i>
                 </a>
             </section>
 
