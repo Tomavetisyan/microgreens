@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/microgreeny.net/static/css/main.e1df8d4b.css",
-    "main.js": "/microgreeny.net/static/js/main.ae1c68e2.js",
-    "static/media/Slide2.jpg": "/microgreeny.net/static/media/Slide2.c3e5c06a51475a5efcc4.jpg",
-    "static/media/Slide1.jpg": "/microgreeny.net/static/media/Slide1.d641226119f42e2cb6ff.jpg",
-    "static/media/MicroArugula.jpeg": "/microgreeny.net/static/media/MicroArugula.76728194a8142c74d77d.jpeg",
-    "static/media/MicroBasilItalian.jpeg": "/microgreeny.net/static/media/MicroBasilItalian.6245188f42a859658ae2.jpeg",
-    "static/media/MicroAmaranthRed.jpeg": "/microgreeny.net/static/media/MicroAmaranthRed.68c91859f8becf956c61.jpeg",
-    "static/media/MicroAsianMix.jpeg": "/microgreeny.net/static/media/MicroAsianMix.c8bfad164144d2a74374.jpeg",
-    "static/media/Slide3.jpg": "/microgreeny.net/static/media/Slide3.ed7b477f771acb2e5406.jpg",
-    "static/media/revicons.eot": "/microgreeny.net/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/microgreeny.net/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/microgreeny.net/static/media/revicons.e8746a624ed098489406.woff",
-    "index.html": "/microgreeny.net/index.html",
-    "main.e1df8d4b.css.map": "/microgreeny.net/static/css/main.e1df8d4b.css.map",
-    "main.ae1c68e2.js.map": "/microgreeny.net/static/js/main.ae1c68e2.js.map"
+    "main.css": "/static/css/main.73eba8e4.css",
+    "main.js": "/static/js/main.951694d2.js",
+    "static/media/Slide2.jpg": "/static/media/Slide2.c3e5c06a51475a5efcc4.jpg",
+    "static/media/Slide1.jpg": "/static/media/Slide1.d641226119f42e2cb6ff.jpg",
+    "static/media/MicroArugula.jpeg": "/static/media/MicroArugula.76728194a8142c74d77d.jpeg",
+    "static/media/MicroBasilItalian.jpeg": "/static/media/MicroBasilItalian.6245188f42a859658ae2.jpeg",
+    "static/media/MicroAmaranthRed.jpeg": "/static/media/MicroAmaranthRed.68c91859f8becf956c61.jpeg",
+    "static/media/MicroAsianMix.jpeg": "/static/media/MicroAsianMix.c8bfad164144d2a74374.jpeg",
+    "static/media/Slide3.jpg": "/static/media/Slide3.ed7b477f771acb2e5406.jpg",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.73eba8e4.css.map": "/static/css/main.73eba8e4.css.map",
+    "main.951694d2.js.map": "/static/js/main.951694d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1df8d4b.css",
-    "static/js/main.ae1c68e2.js"
+    "static/css/main.73eba8e4.css",
+    "static/js/main.951694d2.js"
   ]
 }
